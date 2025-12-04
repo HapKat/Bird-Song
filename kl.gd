@@ -6,18 +6,30 @@ extends Sprite2D
 var falling_key_queue = []
 
 func _process(delta: float) -> void:
-	if key_name != "" and Input.is_action_just_pressed(key_name):
-		pass
-				
-	if falling_key_queue.size() > 0:	
-		if falling_key_queue.front().has_passed:
+	
+	if falling_key_queue.size() > 0:
+		var front_key = falling_key_queue.front()
+		
+		if !is_instance_valid(front_key):
 			falling_key_queue.pop_front()
-		print("popped")
+			return 
+	
+		if front_key.has_passed:
+			falling_key_queue.pop_front()
+		
+		if Input.is_action_just_pressed(key_name):
+			print("key pressed")
+			var key_to_pop = falling_key_queue.pop_front()
+			
+			var distance_from_pass = abs(key_to_pop.pass_threshold - key_to_pop.y)
+			print(distance_from_pass)
+			key_to_pop.queue_free()				
+	
 
 func CreatFallingKey():
 	var fk_inst = falling_key.instantiate()
 	get_tree().get_root().call_deferred("add_child", fk_inst)
-	fk_inst.Setup(position.x, frame + 4)
+	fk_inst.Setup(position.x, global_position.y)
 	
 	falling_key_queue.push_back(fk_inst)
 

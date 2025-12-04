@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://cg5y5rl8mrc7q"]
+
+[sub_resource type="FontVariation" id="FontVariation_4uv1i"]
+
+[node name="GameUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+offset_left = 40.0
+offset_top = 32.0
+offset_right = 224.0
+offset_bottom = 152.0
+theme_override_fonts/normal_font = SubResource("FontVariation_4uv1i")
+theme_override_font_sizes/normal_font_size = 40
+text = "0 points"
