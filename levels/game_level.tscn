@@ -7,24 +7,24 @@
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="button_right" parent="." instance=ExtResource("1_qc6i3")]
+[node name="button_down" parent="." instance=ExtResource("1_qc6i3")]
 position = Vector2(80, 270)
 rotation = 1.5707964
-key_name = "button_right"
-
-[node name="button_up" parent="." instance=ExtResource("1_qc6i3")]
-position = Vector2(-240, 270)
-rotation = 3.1415927
-key_name = "button_up"
-
-[node name="button_down" parent="." instance=ExtResource("1_qc6i3")]
-position = Vector2(240, 270)
 key_name = "button_down"
 
 [node name="button_left" parent="." instance=ExtResource("1_qc6i3")]
+position = Vector2(-240, 270)
+rotation = 3.1415927
+key_name = "button_left"
+
+[node name="button_right" parent="." instance=ExtResource("1_qc6i3")]
+position = Vector2(240, 270)
+key_name = "button_right"
+
+[node name="button_up" parent="." instance=ExtResource("1_qc6i3")]
 position = Vector2(-80, 270)
 rotation = -1.5707964
-key_name = "button_left"
+key_name = "button_up"
 
 [node name="GameUI" parent="." instance=ExtResource("2_sklrn")]
 anchors_preset = 0
