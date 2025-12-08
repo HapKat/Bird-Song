@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://dnixppade4tde"]
+[gd_scene load_steps=4 format=3 uid="uid://dnixppade4tde"]
 
 [ext_resource type="Script" uid="uid://c0rfe8b6ecx41" path="res://TitleScreen/title_screen.gd" id="1_3obt4"]
+[ext_resource type="PackedScene" uid="uid://cupbxg026r421" path="res://generalGame/scenes/birds/goose.tscn" id="2_xvftn"]
+[ext_resource type="Texture2D" uid="uid://6eamknichg1v" path="res://generalGame/assets/birds/goose_feathers.png" id="3_ux371"]
 
 [node name="TitleScreen" type="Node2D"]
 
@@ -19,41 +21,67 @@ offset_bottom = 40.0
 [node name="Start" type="Button" parent="TitleScreen/Buttons"]
 layout_mode = 0
 offset_left = 448.0
-offset_top = 192.0
+offset_top = 256.0
 offset_right = 640.0
-offset_bottom = 256.0
+offset_bottom = 320.0
 theme_override_font_sizes/font_size = 34
 text = "START "
 
 [node name="credits" type="Button" parent="TitleScreen/Buttons"]
 layout_mode = 0
 offset_left = 448.0
-offset_top = 320.0
+offset_top = 384.0
 offset_right = 640.0
-offset_bottom = 384.0
+offset_bottom = 448.0
 theme_override_font_sizes/font_size = 34
 text = "CREDITS"
 
 [node name="quit" type="Button" parent="TitleScreen/Buttons"]
 layout_mode = 0
 offset_left = 448.0
-offset_top = 448.0
+offset_top = 512.0
 offset_right = 640.0
-offset_bottom = 512.0
+offset_bottom = 576.0
 theme_override_font_sizes/font_size = 34
 text = "QUIT"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="TitleScreen"]
 layout_mode = 0
 offset_left = 320.0
-offset_top = 64.0
+offset_top = 112.0
 offset_right = 768.0
-offset_bottom = 160.0
+offset_bottom = 208.0
 theme_override_font_sizes/normal_font_size = 57
 text = "BIRD SONG"
 scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="goose" type="Node" parent="."]
+
+[node name="Goose" parent="goose" instance=ExtResource("2_xvftn")]
+position = Vector2(712, 88)
+scale = Vector2(2, 2)
+
+[node name="GooseFeathers" type="Sprite2D" parent="goose"]
+position = Vector2(792, 32)
+texture = ExtResource("3_ux371")
+region_enabled = true
+region_rect = Rect2(22, 24, 23, 21)
+
+[node name="GooseFeathers2" type="Sprite2D" parent="goose"]
+position = Vector2(784.00006, 88)
+rotation = 0.71733034
+texture = ExtResource("3_ux371")
+region_enabled = true
+region_rect = Rect2(22, 24, 23, 21)
+
+[node name="GooseFeathers3" type="Sprite2D" parent="goose"]
+position = Vector2(839.99994, 56)
+rotation = 1.436406
+texture = ExtResource("3_ux371")
+region_enabled = true
+region_rect = Rect2(92, 19, 11, 25)
 
 [connection signal="pressed" from="TitleScreen/Buttons/Start" to="TitleScreen" method="_on_start_pressed"]
 [connection signal="pressed" from="TitleScreen/Buttons/credits" to="TitleScreen" method="_on_credits_pressed"]

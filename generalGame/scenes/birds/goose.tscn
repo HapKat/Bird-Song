@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cupbxg026r421"]
+
+[ext_resource type="Texture2D" uid="uid://bg10gipgc07b1" path="res://generalGame/assets/birds/goose_flying.png" id="1_a1ql5"]
+
+[node name="Goose" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_a1ql5")
