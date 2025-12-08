@@ -1,3 +1,75 @@
-[gd_scene format=3 uid="uid://wnktqp84gktj"]
+[gd_scene load_steps=2 format=3 uid="uid://wnktqp84gktj"]
 
-[node name="credits" type="Node2D"]
+[ext_resource type="Script" uid="uid://b2pnf7wcsc0lp" path="res://TitleScreen/credits.gd" id="1_3jaeb"]
+
+[node name="credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3jaeb")
+
+[node name="Credits title" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 64.0
+offset_right = 832.0
+offset_bottom = 128.0
+theme_override_font_sizes/normal_font_size = 49
+text = "Credits"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Art" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 192.0
+offset_right = 840.0
+offset_bottom = 256.0
+theme_override_font_sizes/normal_font_size = 35
+text = "Art: Salvatore Costa"
+vertical_alignment = 1
+
+[node name="Story" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 256.0
+offset_right = 840.0
+offset_bottom = 320.0
+theme_override_font_sizes/normal_font_size = 35
+text = "Story: Salvatore Costa"
+vertical_alignment = 1
+
+[node name="Coding" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 320.0
+offset_right = 840.0
+offset_bottom = 384.0
+theme_override_font_sizes/normal_font_size = 35
+text = "Coding: Katharina Hamann"
+vertical_alignment = 1
+
+[node name="Music" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 384.0
+offset_right = 840.0
+offset_bottom = 448.0
+theme_override_font_sizes/normal_font_size = 35
+text = "Music: tba"
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 896.0
+offset_top = 512.0
+offset_right = 1088.0
+offset_bottom = 576.0
+theme_override_font_sizes/font_size = 31
+text = "RETURN"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
