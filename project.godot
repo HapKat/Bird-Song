@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="BirdSong"
-run/main_scene="uid://cpfun4etbhgtn"
+run/main_scene="uid://dnixppade4tde"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Signas="*res://objects/signal.gd"
+Signas="*res://rhythmGame/objects/signal.gd"
 
 [input]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cpfun4etbhgtn"]
 
-[ext_resource type="PackedScene" uid="uid://byeqeh2nr1okd" path="res://KL.tscn" id="1_qc6i3"]
-[ext_resource type="PackedScene" uid="uid://cg5y5rl8mrc7q" path="res://levels/game_ui.tscn" id="2_sklrn"]
+[ext_resource type="PackedScene" uid="uid://byeqeh2nr1okd" path="res://rhythmGame/KL.tscn" id="1_qc6i3"]
+[ext_resource type="PackedScene" uid="uid://cg5y5rl8mrc7q" path="res://rhythmGame/levels/game_ui.tscn" id="2_sklrn"]
 
 [node name="GameLevel" type="Node2D"]
 

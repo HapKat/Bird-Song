@@ -1,13 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://c31hdyc23yjys"]
 
-[ext_resource type="Texture2D" uid="uid://b014sjy1rcm30" path="res://art/vector_placeholer.jpg" id="1_uuajb"]
-[ext_resource type="Script" uid="uid://ck1hw3bhl4646" path="res://levels/falling_key.gd" id="2_j0jm1"]
+[ext_resource type="Texture2D" uid="uid://b014sjy1rcm30" path="res://rhythmGame/art/vector_placeholer.jpg" id="1_ocpog"]
+[ext_resource type="Script" uid="uid://ck1hw3bhl4646" path="res://rhythmGame/levels/falling_key.gd" id="2_ok6hv"]
 
 [node name="FallingKey" type="Sprite2D"]
-texture = ExtResource("1_uuajb")
+texture = ExtResource("1_ocpog")
 region_enabled = true
 region_rect = Rect2(319.53226, 128.5474, 105.74173, 94.831696)
-script = ExtResource("2_j0jm1")
+script = ExtResource("2_ok6hv")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 5.0
