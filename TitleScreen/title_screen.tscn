@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dnixppade4tde"]
+[gd_scene load_steps=5 format=3 uid="uid://dnixppade4tde"]
 
 [ext_resource type="Script" uid="uid://c0rfe8b6ecx41" path="res://TitleScreen/title_screen.gd" id="1_3obt4"]
 [ext_resource type="PackedScene" uid="uid://cupbxg026r421" path="res://generalGame/scenes/birds/goose.tscn" id="2_xvftn"]
 [ext_resource type="Texture2D" uid="uid://6eamknichg1v" path="res://generalGame/assets/birds/goose_feathers.png" id="3_ux371"]
+[ext_resource type="AudioStream" uid="uid://bl3rrvx3mssc6" path="res://generalGame/BackgroundMusic/Aventure - A Beautiful Garden (freetouse.com).mp3" id="4_2e2ej"]
 
 [node name="TitleScreen" type="Node2D"]
 
@@ -57,31 +58,37 @@ scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="goose" type="Node" parent="."]
+[node name="goose" type="Node" parent="TitleScreen"]
 
-[node name="Goose" parent="goose" instance=ExtResource("2_xvftn")]
+[node name="Goose" parent="TitleScreen/goose" instance=ExtResource("2_xvftn")]
 position = Vector2(712, 88)
 scale = Vector2(2, 2)
 
-[node name="GooseFeathers" type="Sprite2D" parent="goose"]
+[node name="GooseFeathers" type="Sprite2D" parent="TitleScreen/goose"]
 position = Vector2(792, 32)
 texture = ExtResource("3_ux371")
 region_enabled = true
 region_rect = Rect2(22, 24, 23, 21)
 
-[node name="GooseFeathers2" type="Sprite2D" parent="goose"]
+[node name="GooseFeathers2" type="Sprite2D" parent="TitleScreen/goose"]
 position = Vector2(784.00006, 88)
 rotation = 0.71733034
 texture = ExtResource("3_ux371")
 region_enabled = true
 region_rect = Rect2(22, 24, 23, 21)
 
-[node name="GooseFeathers3" type="Sprite2D" parent="goose"]
+[node name="GooseFeathers3" type="Sprite2D" parent="TitleScreen/goose"]
 position = Vector2(839.99994, 56)
 rotation = 1.436406
 texture = ExtResource("3_ux371")
 region_enabled = true
 region_rect = Rect2(92, 19, 11, 25)
+
+[node name="backgroundMusic" type="AudioStreamPlayer" parent="TitleScreen"]
+stream = ExtResource("4_2e2ej")
+volume_db = -9.936
+autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="TitleScreen/Buttons/Start" to="TitleScreen" method="_on_start_pressed"]
 [connection signal="pressed" from="TitleScreen/Buttons/credits" to="TitleScreen" method="_on_credits_pressed"]

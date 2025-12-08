@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bl3rrvx3mssc6"
+path="res://.godot/imported/Aventure - A Beautiful Garden (freetouse.com).mp3-396e634084613770c3c6705e63ec2073.mp3str"
+
+[deps]
+
+source_file="res://generalGame/BackgroundMusic/Aventure - A Beautiful Garden (freetouse.com).mp3"
+dest_files=["res://.godot/imported/Aventure - A Beautiful Garden (freetouse.com).mp3-396e634084613770c3c6705e63ec2073.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

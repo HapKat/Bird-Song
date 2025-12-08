@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://wnktqp84gktj"]
+[gd_scene load_steps=3 format=3 uid="uid://wnktqp84gktj"]
 
 [ext_resource type="Script" uid="uid://b2pnf7wcsc0lp" path="res://TitleScreen/credits.gd" id="1_3jaeb"]
+[ext_resource type="AudioStream" uid="uid://bl3rrvx3mssc6" path="res://generalGame/BackgroundMusic/Aventure - A Beautiful Garden (freetouse.com).mp3" id="2_3fj0m"]
 
 [node name="credits" type="Control"]
 layout_mode = 3
@@ -71,5 +72,11 @@ offset_right = 1088.0
 offset_bottom = 576.0
 theme_override_font_sizes/font_size = 31
 text = "RETURN"
+
+[node name="backgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_3fj0m")
+volume_db = -9.936
+autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
