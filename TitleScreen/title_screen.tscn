@@ -3,4 +3,58 @@
 [ext_resource type="Script" uid="uid://c0rfe8b6ecx41" path="res://TitleScreen/title_screen.gd" id="1_3obt4"]
 
 [node name="TitleScreen" type="Node2D"]
+
+[node name="TitleScreen" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 script = ExtResource("1_3obt4")
+
+[node name="Buttons" type="Control" parent="TitleScreen"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Start" type="Button" parent="TitleScreen/Buttons"]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 192.0
+offset_right = 640.0
+offset_bottom = 256.0
+theme_override_font_sizes/font_size = 34
+text = "START "
+
+[node name="credits" type="Button" parent="TitleScreen/Buttons"]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 320.0
+offset_right = 640.0
+offset_bottom = 384.0
+theme_override_font_sizes/font_size = 34
+text = "CREDITS"
+
+[node name="quit" type="Button" parent="TitleScreen/Buttons"]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 448.0
+offset_right = 640.0
+offset_bottom = 512.0
+theme_override_font_sizes/font_size = 34
+text = "QUIT"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TitleScreen"]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 64.0
+offset_right = 768.0
+offset_bottom = 160.0
+theme_override_font_sizes/normal_font_size = 57
+text = "BIRD SONG"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="TitleScreen/Buttons/Start" to="TitleScreen" method="_on_start_pressed"]
+[connection signal="pressed" from="TitleScreen/Buttons/credits" to="TitleScreen" method="_on_credits_pressed"]
+[connection signal="pressed" from="TitleScreen/Buttons/quit" to="TitleScreen" method="_on_quit_pressed"]
