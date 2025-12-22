@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://bdivxvjgs2tfk"]
+
+[ext_resource type="Texture2D" uid="uid://c5tca4n4j0rka" path="res://generalGame/assets/ui/book_placeholder.png" id="1_igiva"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -248.0
+offset_bottom = 203.0
+grow_horizontal = 0
+texture = ExtResource("1_igiva")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/TextureRect"]
+layout_mode = 0
+offset_left = -32.0
+offset_top = 72.0
+offset_right = 8.0
+offset_bottom = 120.0
+theme_override_font_sizes/normal_font_size = 33
+text = "E"
