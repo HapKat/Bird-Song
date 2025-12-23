@@ -1,23 +1,35 @@
-[gd_scene load_steps=4 format=3 uid="uid://cupbxg026r421"]
+[gd_scene load_steps=5 format=3 uid="uid://cupbxg026r421"]
 
 [ext_resource type="Texture2D" uid="uid://bg10gipgc07b1" path="res://generalGame/assets/birds/goose_flying.png" id="1_a1ql5"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_a1y3r"]
-radius = 24.0
+[ext_resource type="Script" uid="uid://heivin5k6tru" path="res://generalGame/scripts/goose.gd" id="1_bhnk6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bhnk6"]
-radius = 32.0
-height = 64.0
+radius = 16.0
+height = 32.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7iuyl"]
+radius = 32.984844
 
 [node name="Goose" type="CharacterBody2D"]
+script = ExtResource("1_bhnk6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_a1ql5")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-shape = SubResource("CircleShape2D_a1y3r")
-
-[node name="interactionZone" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_bhnk6")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="interactionZone" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_7iuyl")
+
+[node name="E" type="RichTextLabel" parent="."]
+offset_left = -8.0
+offset_top = -48.0
+offset_right = 16.0
+offset_bottom = -24.0
+text = "E"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

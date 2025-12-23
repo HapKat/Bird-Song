@@ -19,3 +19,4 @@ func _physics_process(_delta: float) -> void:
 
 func _on_goose_child_entered_tree(node: Node) -> void:
 	talking = true
+	print("talking")
