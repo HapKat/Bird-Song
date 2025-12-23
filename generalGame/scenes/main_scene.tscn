@@ -245,6 +245,7 @@ offset_bottom = -88.0
 scale = Vector2(0.2, 0.2)
 
 [node name="logbook_open" parent="." instance=ExtResource("5_lib6x")]
+visible = false
 z_index = 1
 anchors_preset = 8
 anchor_left = 0.5
