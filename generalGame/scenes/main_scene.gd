@@ -8,6 +8,5 @@ func _ready():
 func _process(delta):
 	# Open logbook when pressing E
 	if Input.is_action_just_pressed("open_logbook"):
-		print("pressed e")
 		$logbook_open.open()
 		

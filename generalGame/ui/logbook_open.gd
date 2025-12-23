@@ -2,13 +2,14 @@ extends CanvasLayer
 
 func _ready():
 	self.hide()
-	print("ready")
 
 
 func open():
-	#get_tree().pause = true
-	self.show()
-	$"../PlayerCharacter".walking = false
+	self.visible = not self.visible
+	$"../PlayerCharacter".walking = not $"../PlayerCharacter".walking
 
 func _on_return_pressed() -> void:
 	self.hide()
+	$"../PlayerCharacter".walking = true
+	
+	
