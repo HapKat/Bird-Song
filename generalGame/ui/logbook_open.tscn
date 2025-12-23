@@ -30,7 +30,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="bird_names"]
+[node name="label2" type="RichTextLabel" parent="bird_names"]
 layout_mode = 0
 offset_left = 360.0
 offset_top = 384.0
@@ -41,7 +41,7 @@ text = "???"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="bird_names"]
+[node name="gooseText" type="RichTextLabel" parent="bird_names"]
 layout_mode = 0
 offset_left = 112.0
 offset_top = 384.0
@@ -81,7 +81,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="bird_images" type="ColorRect" parent="bird_images5"]
+[node name="gooseImg" type="ColorRect" parent="bird_images5"]
 layout_mode = 0
 offset_left = 104.0
 offset_top = 192.0

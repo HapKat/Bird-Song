@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c5gbro5l8yloo"]
+[gd_scene load_steps=11 format=3 uid="uid://c5gbro5l8yloo"]
 
 [ext_resource type="Script" uid="uid://ha78thn30l7a" path="res://generalGame/scenes/main_scene.gd" id="1_60p7v"]
 [ext_resource type="Texture2D" uid="uid://cg4dsryk86sos" path="res://generalGame/assets/tiles/placeholder_tiles.jpg" id="1_ie7ty"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bdivxvjgs2tfk" path="res://generalGame/ui/logbook_icon.tscn" id="4_ef31h"]
 [ext_resource type="PackedScene" uid="uid://byo1vwt5huh75" path="res://generalGame/ui/logbook_open.tscn" id="5_lib6x"]
 [ext_resource type="AudioStream" uid="uid://bl3rrvx3mssc6" path="res://generalGame/BackgroundMusic/Aventure - A Beautiful Garden (freetouse.com).mp3" id="7_u17i1"]
+[ext_resource type="Script" uid="uid://cqyqxktwnpp1q" path="res://generalGame/scripts/bird_module.gd" id="8_r34kx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_40o6t"]
 texture = ExtResource("1_ie7ty")
@@ -218,8 +219,6 @@ tile_set = SubResource("TileSet_kv58g")
 format = 2
 layer_0/tile_data = PackedInt32Array(-65534, 327680, 2, 2, 327680, 2, 65538, 327680, 2, -196606, 327680, 2, -131070, 327680, 2, 131074, 327680, 2, 196610, 327680, 2, -131074, 65536, 2, -65538, 65536, 2, -2, 65536, 2, 65534, 65536, 2, 131070, 65536, 2, 196606, 65536, 2, 262142, 65536, 2, 262143, 131072, 2, 196608, 131072, 2, 196609, 131072, 2, 131073, 131072, 2, 131072, 131072, 2, 65536, 131072, 2, 131071, 131072, 2, 196607, 131072, 2, 65537, 131072, 2, 1, 131072, 2, 0, 131072, 2, 65535, 131072, 2, -1, 131072, 2, -65536, 131072, 2, -65535, 131072, 2, -131072, 131072, 2, -196608, 131072, 2, -196607, 131072, 2, -131071, 131072, 2, -65537, 131072, 2, -131073, 131072, 2, -196609, 131072, 2, -262145, 131072, 2, -327681, 131072, 2, -393217, 131072, 2, -524288, 131072, 2, -524287, 131072, 2, -458751, 131072, 2, -393215, 131072, 2, -327679, 131072, 2, -262143, 131072, 2, -262144, 131072, 2, -327680, 131072, 2, -393216, 131072, 2, -458752, 131072, 2, -262142, 327680, 2, -327678, 327680, 2, -393214, 327680, 2, -458750, 327680, 2, -524286, 327680, 2, -196610, 65536, 2, -262146, 65536, 4, -327682, 65536, 3, -393218, 65536, 4, -458754, 65536, 2, -458753, 131072, 2)
 
-[node name="PlayerCharacter" parent="." instance=ExtResource("2_40o6t")]
-
 [node name="Logbook icon" parent="." instance=ExtResource("4_ef31h")]
 anchors_preset = 1
 anchor_left = 1.0
@@ -238,3 +237,8 @@ parameters/looping = true
 [node name="Goose" parent="." instance=ExtResource("3_kv58g")]
 position = Vector2(32, -128)
 scale = Vector2(0.5, 0.5)
+
+[node name="PlayerCharacter" parent="." instance=ExtResource("2_40o6t")]
+
+[node name="BirdModule" type="Node" parent="."]
+script = ExtResource("8_r34kx")

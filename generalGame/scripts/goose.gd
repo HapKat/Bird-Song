@@ -9,6 +9,8 @@ func _ready() -> void:
 func _process(_delta) -> void:
 	if player_in_chat_zone == true:
 		$E.show()
+		$"../PlayerCharacter".talking = "Goose"
+
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "PlayerCharacter":        
@@ -20,3 +22,4 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.name == "PlayerCharacter":        
 		player_in_chat_zone = false
 		$E.hide()
+		$"../PlayerCharacter".talking = ""

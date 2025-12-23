@@ -3,8 +3,12 @@ extends CharacterBody2D
 @export var player: CharacterBody2D
 
 const SPEED := 100.0
-var talking = false
+var talking: String
 var walking = true
+
+func _process(_delta) -> void:
+	pass
+		
 
 func _physics_process(_delta: float) -> void:
 	if walking == true:
@@ -15,8 +19,4 @@ func _physics_process(_delta: float) -> void:
 	
 		velocity = input_vector.normalized() * SPEED
 		move_and_slide()
-
-
-func _on_goose_child_entered_tree(node: Node) -> void:
-	talking = true
-	print("talking")
+		
