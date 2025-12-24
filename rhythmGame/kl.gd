@@ -1,7 +1,7 @@
 extends Sprite2D
 
-@onready var falling_key = preload("res://objects/falling_key.tscn")
-@onready var score_text = preload("res://objects/score_press_text.tscn")
+@onready var falling_key = preload("res://rhythmGame/objects/falling_key.tscn")
+@onready var score_text = preload("res://rhythmGame/objects/score_press_text.tscn")
 @export var key_name: String = ""
 
 var falling_key_queue: Array[FallingKey] = []

@@ -3,6 +3,11 @@ extends Control
 var score: int = 0
 
 # Called when the node enters the scene tree for the first time.
+func _process(_delta):
+	if score >= 100:
+		$"..".end_game()
+		print("end game now")
+
 func _ready() -> void:
 	Signas.IncrementScore.connect(IncrementScore)
 

@@ -1,9 +1,9 @@
 extends CanvasLayer
 
 func _ready():
-	#newBird.hide()
+	$newBird.hide()
 	pass
 	
 func newBirdAdded():
-	#newBird.show()
+	$newBird.show()
 	pass
