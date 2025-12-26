@@ -19,6 +19,11 @@ config/icon="res://icon.svg"
 
 Signas="*res://rhythmGame/objects/signal.gd"
 
+[display]
+
+window/size/mode=2
+window/stretch/mode="canvas_items"
+
 [input]
 
 button_right={
