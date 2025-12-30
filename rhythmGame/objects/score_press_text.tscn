@@ -1,6 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://buehja1ptuyk8"]
-
-[ext_resource type="Script" uid="uid://e5u7k7adg03m" path="res://rhythmGame/objects/score_press_text.gd" id="1_t2hdy"]
+[gd_scene load_steps=4 format=3 uid="uid://buehja1ptuyk8"]
 
 [sub_resource type="Animation" id="Animation_fuce0"]
 length = 0.001
@@ -84,7 +82,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_t2hdy")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 0
