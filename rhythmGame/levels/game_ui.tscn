@@ -17,10 +17,10 @@ script = ExtResource("1_451jp")
 
 [node name="ScoreLabel" type="RichTextLabel" parent="CanvasLayer"]
 unique_name_in_owner = true
-offset_left = 40.0
-offset_top = 32.0
-offset_right = 336.0
-offset_bottom = 152.0
+offset_left = 32.0
+offset_top = 16.0
+offset_right = 328.0
+offset_bottom = 136.0
 theme_override_fonts/normal_font = SubResource("FontVariation_4uv1i")
 theme_override_font_sizes/normal_font_size = 40
 text = "0 points"

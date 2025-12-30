@@ -6,7 +6,6 @@ var score: int = 0
 func _process(_delta):
 	if score >= 1000:
 		$"..".end_game()
-		print("end game now")
 
 func _ready() -> void:
 	Signas.IncrementScore.connect(IncrementScore)

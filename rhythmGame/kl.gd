@@ -29,13 +29,11 @@ func _process(delta: float) -> void:
 		if falling_key_queue.front().has_passed:
 			falling_key_queue.pop_front()
 		# If key is pressed, pop falling key from queue front and calc
-		# distance from critical point
 		if Input.is_action_just_pressed(key_name):
 			var key_to_pop: FallingKey = falling_key_queue.pop_front()
+			## calculating distance from kl to calculate score
 			if key_to_pop is FallingKey:
 				var distance_from_pass = abs(key_to_pop.pass_threshold - key_to_pop.global_position.y)
-				print(distance_from_pass)
-				
 				if distance_from_pass < perfect_press_threshold:
 					Signas.IncrementScore.emit(perfect_press_score)
 				elif distance_from_pass < great_press_threshold:
@@ -49,17 +47,16 @@ func _process(delta: float) -> void:
 					pass
 					
 				key_to_pop.queue_free()			
-				
+				## Connect to score
 				var st_inst = score_text.instantiate()
 				get_tree().get_root().call_deferred("add_child", st_inst)	
-				print(global_position)
 				st_inst.global_position = global_position
 		
 
 func CreatFallingKey():
 	var fk_inst = falling_key.instantiate()
 	add_child(fk_inst)
-	fk_inst.Setup(position.x, global_position.y)
+	fk_inst.Setup(global_position.x, global_position.y)
 	
 	falling_key_queue.push_back(fk_inst)
 
