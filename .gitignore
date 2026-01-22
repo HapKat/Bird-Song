@@ -1,3 +1,33 @@
-# Godot 4+ specific ignores
+# Godot engine files
 .godot/
-/android/
+
+# Exported builds
+/export/
+/exports/
+
+# Temporary files
+*.tmp
+*.log
+
+# Imported assets (auto-generated)
+.import/
+*.import
+
+# Mono / C# (ignore if not using C#)
+.mono/
+data_*/
+*.dll
+*.pdb
+
+# OS / Editor junk
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Rider / JetBrains
+.idea/
+
+# Backup files
+*~

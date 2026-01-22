@@ -11,9 +11,11 @@ func printDialogue(bird):
 func openRhythmGame(bird):
 	$"..".hide()
 	$"../Logbook icon".hide()
+	$"../PlayerCharacter/Camera2D".enabled = false
 	var game_scene = preload("res://rhythmGame/levels/game_level.tscn").instantiate()
 	$"../GameSceneHolder".add_child(game_scene)
 	game_scene.game_finished.connect(_on_game_finished)
+	$"../PlayerCharacter/Camera2D".enabled = true
 	
 func _on_game_finished():
 	# Remove game scene
@@ -25,9 +27,6 @@ func _on_game_finished():
 
 
 func addToLogbook(bird):
-	if (ListOfFoundBird.has(bird)):
-		pass
-	else:
 		## change Text
 		var BIRDTEXT: String = bird + "Text"
 		var birdText = logbook_names.get_node(BIRDTEXT)
