@@ -7,7 +7,7 @@ var init_y_pos: float = -380
 
 # true if falling key has passed the allowed input frame
 var has_passed: bool = false 
-var pass_threshold = 450
+var pass_threshold = 84
 
 func _init():
 	set_process(false)
