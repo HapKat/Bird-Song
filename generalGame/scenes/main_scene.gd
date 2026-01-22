@@ -13,9 +13,7 @@ func _process(delta):
 	if Input.is_action_just_pressed("interact"):
 		if $PlayerCharacter.talking != "":
 			if not ($BirdModule.ListOfFoundBird.has(PLAYER.talking)):
-				$BirdModule.printDialogue(PLAYER.talking)
-				$BirdModule.addToLogbook(PLAYER.talking)
-				$BirdModule.openRhythmGame(PLAYER.talking)
+				$BirdModule.openDialogue(PLAYER.talking)			
 		else:
 			pass
 		

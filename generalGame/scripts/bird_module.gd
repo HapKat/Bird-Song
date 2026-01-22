@@ -4,9 +4,18 @@ extends Node
 @onready var logbook_imgs = get_node("/root/mainScene/logbook_open/bird_images")
 
 var ListOfFoundBird: Array = []
+var current_bird 
 
-func printDialogue(bird):
-	print("Hello I'm the " + bird)
+func _ready():
+	$"../DailogueScreen".dialogue_finished.connect(_on_dialogue_finished)
+
+func openDialogue(bird):
+	$"../DailogueScreen".open(bird)
+	current_bird = bird
+	addToLogbook(bird)
+	
+func _on_dialogue_finished():
+	openRhythmGame(current_bird)
 	
 func openRhythmGame(bird):
 	$"..".hide()
@@ -24,6 +33,7 @@ func _on_game_finished():
 	# Show main world again
 	$"..".show()
 	$"../Logbook icon".show()
+	$"../PlayerCharacter".walking = not $"../PlayerCharacter".walking
 
 
 func addToLogbook(bird):

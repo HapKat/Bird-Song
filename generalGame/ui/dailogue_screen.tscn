@@ -1,0 +1,71 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnkor74pifeo6"]
+
+[ext_resource type="Script" uid="uid://sbuv6wyaej6r" path="res://generalGame/ui/dailogue_screen.gd" id="1_lppvm"]
+[ext_resource type="Texture2D" uid="uid://dieaol2kdp6rn" path="res://generalGame/assets/birds/goose_faces.png" id="2_mylxv"]
+
+[node name="DailogueScreen" type="CanvasLayer"]
+script = ExtResource("1_lppvm")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 48.0
+offset_top = 344.0
+offset_right = 1104.0
+offset_bottom = 624.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 56.0
+offset_top = 352.0
+offset_right = 1096.0
+offset_bottom = 616.0
+color = Color(0.9982434, 0.9150961, 0.88043696, 1)
+
+[node name="picture_field" type="ColorRect" parent="."]
+offset_left = 848.0
+offset_top = 376.0
+offset_right = 1064.0
+offset_bottom = 584.0
+
+[node name="dialogue_field" type="ColorRect" parent="."]
+offset_left = 80.0
+offset_top = 376.0
+offset_right = 824.0
+offset_bottom = 584.0
+
+[node name="return" type="Button" parent="."]
+offset_left = 992.0
+offset_top = 560.0
+offset_right = 1085.0
+offset_bottom = 607.0
+theme_override_font_sizes/font_size = 25
+text = "Return
+"
+
+[node name="bird_images" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="gooseDia" type="Sprite2D" parent="bird_images"]
+position = Vector2(952, 472)
+scale = Vector2(2.2777777, 2.25)
+texture = ExtResource("2_mylxv")
+region_enabled = true
+region_rect = Rect2(128, 0, 63, 64)
+
+[node name="flamingoDia" type="Sprite2D" parent="bird_images"]
+texture = ExtResource("2_mylxv")
+region_enabled = true
+region_rect = Rect2(0, 0, 66, 64)
+
+[node name="text" type="RichTextLabel" parent="."]
+offset_left = 104.0
+offset_top = 408.0
+offset_right = 800.0
+offset_bottom = 560.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 28
+text = "???"
+
+[connection signal="pressed" from="return" to="." method="_on_return_pressed"]

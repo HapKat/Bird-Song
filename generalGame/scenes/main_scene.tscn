@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c5gbro5l8yloo"]
+[gd_scene load_steps=16 format=3 uid="uid://c5gbro5l8yloo"]
 
 [ext_resource type="Script" uid="uid://ha78thn30l7a" path="res://generalGame/scenes/main_scene.gd" id="1_60p7v"]
 [ext_resource type="Texture2D" uid="uid://cg4dsryk86sos" path="res://generalGame/assets/tiles/placeholder_tiles.jpg" id="1_ie7ty"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://byo1vwt5huh75" path="res://generalGame/ui/logbook_open.tscn" id="5_lib6x"]
 [ext_resource type="AudioStream" uid="uid://bl3rrvx3mssc6" path="res://generalGame/BackgroundMusic/Aventure - A Beautiful Garden (freetouse.com).mp3" id="7_u17i1"]
 [ext_resource type="Script" uid="uid://cqyqxktwnpp1q" path="res://generalGame/scripts/bird_module.gd" id="8_r34kx"]
+[ext_resource type="PackedScene" uid="uid://bnkor74pifeo6" path="res://generalGame/ui/dailogue_screen.tscn" id="9_ubwgl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_40o6t"]
 texture = ExtResource("1_ie7ty")
@@ -279,3 +280,5 @@ shape = SubResource("WorldBoundaryShape2D_f6pbq")
 
 [node name="upperBorder" type="CollisionShape2D" parent="worldBorders/StaticBody2D"]
 shape = SubResource("WorldBoundaryShape2D_pu6t1")
+
+[node name="DailogueScreen" parent="." instance=ExtResource("9_ubwgl")]
