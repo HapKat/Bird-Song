@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://byo1vwt5huh75"]
+[gd_scene load_steps=6 format=3 uid="uid://byo1vwt5huh75"]
 
 [ext_resource type="Script" uid="uid://b7v1jgc55xfvv" path="res://generalGame/ui/logbook_open.gd" id="1_rxplv"]
-[ext_resource type="Texture2D" uid="uid://bg10gipgc07b1" path="res://generalGame/assets/birds/goose_flying.png" id="2_b216p"]
-[ext_resource type="Texture2D" uid="uid://dnq18a773pso" path="res://generalGame/assets/birds/goose_flying_blackout.png" id="3_76iym"]
+[ext_resource type="Texture2D" uid="uid://bg10gipgc07b1" path="res://generalGame/assets/birds/goose/goose_flying.png" id="2_b216p"]
+[ext_resource type="Texture2D" uid="uid://dnq18a773pso" path="res://generalGame/assets/birds/goose/goose_flying_blackout.png" id="3_76iym"]
+[ext_resource type="Texture2D" uid="uid://dhowan63er17f" path="res://generalGame/assets/birds/placeholder/placeholderBlackout.png" id="4_oyobe"]
+[ext_resource type="Texture2D" uid="uid://dhv37c8mo1bi7" path="res://generalGame/assets/birds/placeholder/placeholderBird.jpg" id="5_ia1u3"]
 
 [node name="logbook_open" type="CanvasLayer"]
 script = ExtResource("1_rxplv")
@@ -32,22 +34,22 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="label2" type="RichTextLabel" parent="bird_names"]
+[node name="GooseText" type="RichTextLabel" parent="bird_names"]
 layout_mode = 0
-offset_left = 360.0
+offset_left = 112.0
 offset_top = 384.0
-offset_right = 536.0
+offset_right = 288.0
 offset_bottom = 424.0
 theme_override_font_sizes/normal_font_size = 22
 text = "???"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="GooseText" type="RichTextLabel" parent="bird_names"]
+[node name="PlaceholderText" type="RichTextLabel" parent="bird_names"]
 layout_mode = 0
-offset_left = 112.0
+offset_left = 360.0
 offset_top = 384.0
-offset_right = 288.0
+offset_right = 536.0
 offset_bottom = 424.0
 theme_override_font_sizes/normal_font_size = 22
 text = "???"
@@ -94,6 +96,17 @@ z_index = 2
 position = Vector2(200, 288)
 scale = Vector2(2.5, 2.5)
 texture = ExtResource("3_76iym")
+
+[node name="PlaceholderBlackout" type="Sprite2D" parent="bird_images"]
+z_index = 2
+position = Vector2(447.75, 287.75)
+scale = Vector2(0.85555553, 0.85555553)
+texture = ExtResource("4_oyobe")
+
+[node name="Placeholder" type="Sprite2D" parent="bird_images"]
+position = Vector2(447.75, 287.75)
+scale = Vector2(0.85555553, 0.85555553)
+texture = ExtResource("5_ia1u3")
 
 [node name="Return" type="Button" parent="."]
 z_index = 3

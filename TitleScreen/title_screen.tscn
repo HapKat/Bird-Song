@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c0rfe8b6ecx41" path="res://TitleScreen/title_screen.gd" id="1_3obt4"]
 [ext_resource type="PackedScene" uid="uid://cupbxg026r421" path="res://generalGame/scenes/birds/goose.tscn" id="2_xvftn"]
-[ext_resource type="Texture2D" uid="uid://6eamknichg1v" path="res://generalGame/assets/birds/goose_feathers.png" id="3_ux371"]
+[ext_resource type="Texture2D" uid="uid://6eamknichg1v" path="res://generalGame/assets/birds/goose/goose_feathers.png" id="3_ux371"]
 [ext_resource type="AudioStream" uid="uid://bl3rrvx3mssc6" path="res://generalGame/BackgroundMusic/Aventure - A Beautiful Garden (freetouse.com).mp3" id="4_2e2ej"]
 
 [node name="TitleScreen" type="Node2D"]

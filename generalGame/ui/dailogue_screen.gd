@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 signal dialogue_finished
-@onready var images = get_node("$bird_images")
+@onready var images = get_node("bird_images")
 
 var bird_picture
 var bird_text
@@ -14,12 +14,12 @@ func open(bird):
 	$"../PlayerCharacter".walking = not $"../PlayerCharacter".walking
 	
 	## Add bird icon
-	#var BIRDDIA: String = bird + "Dia"
-	#var birdDia = images.get_node(BIRDDIA)
-	#birdDia.show()
+	var BIRDDIA: String = bird + "Dia"
+	var birdDia = images.get_node(BIRDDIA)
+	birdDia.show()
 	
 	## Add text
-	$text.text = "Hello, I'm the goose"
+	$text.text = ".."
 
 func _on_return_pressed() -> void:
 	self.hide()

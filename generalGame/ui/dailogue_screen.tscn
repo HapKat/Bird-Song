@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bnkor74pifeo6"]
+[gd_scene load_steps=4 format=3 uid="uid://bnkor74pifeo6"]
 
 [ext_resource type="Script" uid="uid://sbuv6wyaej6r" path="res://generalGame/ui/dailogue_screen.gd" id="1_lppvm"]
-[ext_resource type="Texture2D" uid="uid://dieaol2kdp6rn" path="res://generalGame/assets/birds/goose_faces.png" id="2_mylxv"]
+[ext_resource type="Texture2D" uid="uid://dieaol2kdp6rn" path="res://generalGame/assets/birds/goose/goose_faces.png" id="2_mylxv"]
+[ext_resource type="Texture2D" uid="uid://dhv37c8mo1bi7" path="res://generalGame/assets/birds/placeholder/placeholderBird.jpg" id="3_l1opd"]
 
 [node name="DailogueScreen" type="CanvasLayer"]
 script = ExtResource("1_lppvm")
@@ -47,17 +48,21 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="gooseDia" type="Sprite2D" parent="bird_images"]
+[node name="GooseDia" type="Sprite2D" parent="bird_images"]
+visible = false
 position = Vector2(952, 472)
 scale = Vector2(2.2777777, 2.25)
 texture = ExtResource("2_mylxv")
 region_enabled = true
 region_rect = Rect2(128, 0, 63, 64)
 
-[node name="flamingoDia" type="Sprite2D" parent="bird_images"]
-texture = ExtResource("2_mylxv")
+[node name="PlaceholderDia" type="Sprite2D" parent="bird_images"]
+visible = false
+position = Vector2(963, 477.5)
+scale = Vector2(2.5, 2.5689654)
+texture = ExtResource("3_l1opd")
 region_enabled = true
-region_rect = Rect2(0, 0, 66, 64)
+region_rect = Rect2(42, 39, 68, 58)
 
 [node name="text" type="RichTextLabel" parent="."]
 offset_left = 104.0
