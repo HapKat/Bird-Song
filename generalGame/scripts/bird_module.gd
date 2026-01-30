@@ -10,7 +10,7 @@ func _ready():
 	$"../DailogueScreen".dialogue_finished.connect(_on_dialogue_finished)
 
 func openDialogue(bird):
-	$"../DailogueScreen".open(bird)
+	$"../DailogueScreen".open(bird, 0)
 	current_bird = bird
 	addToLogbook(bird)
 	

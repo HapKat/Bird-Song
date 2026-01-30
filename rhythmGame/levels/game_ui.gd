@@ -4,7 +4,7 @@ var score: int = 0
 
 # Called when the node enters the scene tree for the first time.
 func _process(_delta):
-	if score >= 1000:
+	if score >= 100:
 		$"..".end_game()
 
 func _ready() -> void:

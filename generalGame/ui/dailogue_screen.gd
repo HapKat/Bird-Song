@@ -5,11 +5,12 @@ signal dialogue_finished
 
 var bird_picture
 var bird_text
+var lines 
 
 func _ready():
 	self.hide()
 	
-func open(bird):
+func open(bird, index):
 	self.visible = not self.visible
 	$"../PlayerCharacter".walking = not $"../PlayerCharacter".walking
 	
@@ -19,7 +20,8 @@ func open(bird):
 	birdDia.show()
 	
 	## Add text
-	$text.text = ".."
+	lines = DialogueDatabase.DIALOGUES.get(bird)
+	$text.text = lines[index]
 
 func _on_return_pressed() -> void:
 	self.hide()
