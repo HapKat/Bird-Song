@@ -12,8 +12,7 @@ func _process(delta):
 		$logbook_open.open()
 	if Input.is_action_just_pressed("interact"):
 		if $PlayerCharacter.talking != "":
-			if not ($BirdModule.ListOfFoundBird.has(PLAYER.talking)):
-				$BirdModule.openDialogue(PLAYER.talking)			
+			$BirdModule.openDialogue(PLAYER.talking)			
 		else:
 			pass
 		

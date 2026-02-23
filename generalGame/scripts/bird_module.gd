@@ -6,11 +6,13 @@ extends Node
 var ListOfFoundBird: Array = []
 var current_bird 
 
+
 func _ready():
 	$"../DailogueScreen".dialogue_finished.connect(_on_dialogue_finished)
 
 func openDialogue(bird):
-	$"../DailogueScreen".open(bird, 0)
+	var index = BirdStates.bird_progress.get(bird, {}).get("dialogue_index", 0)
+	$"../DailogueScreen".open(bird, index)
 	current_bird = bird
 	addToLogbook(bird)
 	
