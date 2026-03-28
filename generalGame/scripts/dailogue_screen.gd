@@ -3,8 +3,6 @@ extends CanvasLayer
 signal dialogue_finished
 @onready var IMAGES = get_node("bird_images")
 
-
-
 var bird_picture
 var bird_text
 var lines 
@@ -12,6 +10,10 @@ var current_bird
 
 func _ready():
 	self.hide()
+	
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("return"):
+		return_pressed()
 	
 func open(bird, index):
 	self.visible = not self.visible
@@ -28,6 +30,9 @@ func open(bird, index):
 	$text.text = lines[index]
 
 func _on_return_pressed() -> void:
+	return_pressed()
+
+func return_pressed():
 	self.hide()
 	$"../Logbook icon".hide()
 	emit_signal("dialogue_finished")
@@ -35,5 +40,3 @@ func _on_return_pressed() -> void:
 	print(index)
 	index = index + 1
 	print(index)
-	
-	
