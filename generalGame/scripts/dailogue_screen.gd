@@ -3,6 +3,8 @@ extends CanvasLayer
 signal dialogue_finished
 @onready var IMAGES = get_node("bird_images")
 
+
+
 var bird_picture
 var bird_text
 var lines 

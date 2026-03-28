@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cupbxg026r421"]
+[gd_scene load_steps=5 format=3 uid="uid://brwv6suqsilol"]
 
-[ext_resource type="Texture2D" uid="uid://bg10gipgc07b1" path="res://generalGame/assets/birds/goose/goose_flying.png" id="1_a1ql5"]
-[ext_resource type="Script" uid="uid://heivin5k6tru" path="res://generalGame/scripts/goose.gd" id="1_bhnk6"]
+[ext_resource type="Script" uid="uid://bpfvp5u8b3wrd" path="res://generalGame/scripts/placeholder.gd" id="1_ysa8t"]
+[ext_resource type="Texture2D" uid="uid://dhv37c8mo1bi7" path="res://generalGame/assets/birds/placeholder/placeholderBird.jpg" id="2_ysa8t"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bhnk6"]
 radius = 16.0
@@ -10,11 +10,13 @@ height = 32.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_7iuyl"]
 radius = 32.984844
 
-[node name="Goose" type="CharacterBody2D"]
-script = ExtResource("1_bhnk6")
+[node name="placeholder" type="CharacterBody2D"]
+script = ExtResource("1_ysa8t")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_a1ql5")
+position = Vector2(-1.9073486e-06, -1.9073486e-06)
+scale = Vector2(0.1966667, 0.19666667)
+texture = ExtResource("2_ysa8t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_bhnk6")
