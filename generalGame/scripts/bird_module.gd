@@ -1,9 +1,9 @@
 extends Node
 
-@onready var logbook_names = get_node("/root/mainScene/logbook_open/bird_names")
-@onready var logbook_imgs = get_node("/root/mainScene/logbook_open/bird_images")
+@onready var LOGBOOK_NAMES = get_node("/root/mainScene/logbook_open/bird_names")
+@onready var LOGBOOK_IMGS = get_node("/root/mainScene/logbook_open/bird_images")
 
-var ListOfFoundBird: Array = []
+var ListOfFoundBirds: Array = []
 var current_bird 
 
 
@@ -41,20 +41,20 @@ func _on_game_finished():
 func addToLogbook(bird):
 		## change Text
 		var BIRDTEXT: String = bird + "Text"
-		var birdText = logbook_names.get_node(BIRDTEXT)
+		var birdText = LOGBOOK_NAMES.get_node(BIRDTEXT)
 		birdText.text = bird
 		print("Added " + bird + " to Logbook")
 		
 		
 		## change image
 		var BIRDBLACKOUT: String = bird + "Blackout"
-		var birdBlackout = logbook_imgs.get_node(BIRDBLACKOUT)
+		var birdBlackout = LOGBOOK_IMGS.get_node(BIRDBLACKOUT)
 		birdBlackout.hide()
 		
 		## show that bird was added in logbook icon
 		$"../Logbook icon".newBirdAdded()
 		
 		## add bird to list
-		ListOfFoundBird.append(bird)
-		print(ListOfFoundBird)
+		ListOfFoundBirds.append(bird)
+		print(ListOfFoundBirds)
 	

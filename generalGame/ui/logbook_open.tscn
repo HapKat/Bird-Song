@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://byo1vwt5huh75"]
 
-[ext_resource type="Script" uid="uid://b7v1jgc55xfvv" path="res://generalGame/ui/logbook_open.gd" id="1_rxplv"]
+[ext_resource type="Script" uid="uid://b7v1jgc55xfvv" path="res://generalGame/scripts/logbook_open.gd" id="1_rxplv"]
 [ext_resource type="Texture2D" uid="uid://bg10gipgc07b1" path="res://generalGame/assets/birds/goose/goose_flying.png" id="2_b216p"]
 [ext_resource type="Texture2D" uid="uid://dnq18a773pso" path="res://generalGame/assets/birds/goose/goose_flying_blackout.png" id="3_76iym"]
 [ext_resource type="Texture2D" uid="uid://dhowan63er17f" path="res://generalGame/assets/birds/placeholder/placeholderBlackout.png" id="4_oyobe"]

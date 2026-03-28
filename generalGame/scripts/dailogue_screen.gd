@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 signal dialogue_finished
-@onready var images = get_node("bird_images")
+@onready var IMAGES = get_node("bird_IMAGES")
 
 var bird_picture
 var bird_text
@@ -18,7 +18,7 @@ func open(bird, index):
 	
 	## Add bird icon
 	var BIRDDIA: String = bird + "Dia"
-	var birdDia = images.get_node(BIRDDIA)
+	var birdDia = IMAGES.get_node(BIRDDIA)
 	birdDia.show()
 	
 	## Add text

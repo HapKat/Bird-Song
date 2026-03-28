@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bnkor74pifeo6"]
 
-[ext_resource type="Script" uid="uid://sbuv6wyaej6r" path="res://generalGame/ui/dailogue_screen.gd" id="1_lppvm"]
+[ext_resource type="Script" uid="uid://sbuv6wyaej6r" path="res://generalGame/scripts/dailogue_screen.gd" id="1_lppvm"]
 [ext_resource type="Texture2D" uid="uid://dieaol2kdp6rn" path="res://generalGame/assets/birds/goose/goose_faces.png" id="2_mylxv"]
 [ext_resource type="Texture2D" uid="uid://dhv37c8mo1bi7" path="res://generalGame/assets/birds/placeholder/placeholderBird.jpg" id="3_l1opd"]
 
