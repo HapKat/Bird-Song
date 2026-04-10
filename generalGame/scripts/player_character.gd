@@ -3,7 +3,7 @@ extends CharacterBody2D
 @export var player: CharacterBody2D
 
 const SPEED := 100.0
-var talking: String
+var talking = null
 var walking = true
 
 func _process(_delta) -> void:

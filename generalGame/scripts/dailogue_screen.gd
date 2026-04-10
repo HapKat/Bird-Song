@@ -1,12 +1,12 @@
 extends CanvasLayer
 
-signal dialogue_finished
-@onready var IMAGES = get_node("bird_images")
+signal open_rhythm_game
+@onready var IMAGES = get_node("images")
 
-var bird_picture
-var bird_text
 var lines 
-var current_bird
+var current_character
+var icon
+var ICON
 
 func _ready():
 	self.hide()
@@ -15,28 +15,37 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("return"):
 		return_pressed()
 	
-func open(bird, index):
+func open(character, index):
+	current_character = character
 	self.visible = not self.visible
 	$"../PlayerCharacter".walking = not $"../PlayerCharacter".walking
-	current_bird = bird
+	current_character = character
 	
-	## Add bird icon
-	var BIRDDIA: String = bird + "Dia"
-	var birdDia = IMAGES.get_node(BIRDDIA)
-	birdDia.show()
+	## Add icon
+	ICON = character.name + "Dia"
+	icon = IMAGES.get_node(ICON)
+	print(ICON)
+	icon.show()
 	
 	## Add text
-	lines = DialogueDatabase.DIALOGUES.get(bird)
+	lines = DialogueDatabase.DIALOGUES.get(character.name)
+	if lines == null:
+		print("No dialogue found for: ", character.name)
+		return
 	$text.text = lines[index]
 
 func _on_return_pressed() -> void:
 	return_pressed()
 
 func return_pressed():
-	self.hide()
-	$"../Logbook icon".hide()
-	emit_signal("dialogue_finished")
-	var index = BirdStates.bird_progress.get(current_bird).dialogue_index
-	print(index)
-	index = index + 1
-	print(index)
+	icon = null
+	var index
+	if current_character.is_in_group("bird"):
+		index = BirdStates.bird_progress.get(current_character.name).dialogue_index
+		emit_signal("open_rhythm_game")
+		self.hide()
+		$"../Logbook icon".hide()
+	elif current_character.is_in_group("npc"):
+		index = NPCStates.npc_progress.get(current_character.name).dialogue_index
+		self.hide()
+		$"../PlayerCharacter".walking = not $"../PlayerCharacter".walking

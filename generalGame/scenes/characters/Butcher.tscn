@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://yv5jfknb3yyb"]
+
+[ext_resource type="Script" uid="uid://bemwdi3a428c1" path="res://generalGame/scripts/Butcher.gd" id="1_dgxqm"]
+[ext_resource type="Texture2D" uid="uid://rbogq2p2v3xc" path="res://generalGame/assets/characters/Berk.png" id="2_dk3w7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3ikif"]
+radius = 24.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j3e4w"]
+radius = 40.0
+
+[node name="Butcher" type="CharacterBody2D"]
+z_index = 2
+script = ExtResource("1_dgxqm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_dk3w7")
+region_enabled = true
+region_rect = Rect2(135, 15, 50, 72)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_3ikif")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-8, -48)
+
+[node name="InteractionZone" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(8, 48)
+shape = SubResource("CircleShape2D_j3e4w")
+
+[node name="E" type="RichTextLabel" parent="."]
+offset_left = -8.0
+offset_top = -56.0
+offset_right = 8.0
+offset_bottom = -32.0
+text = "E"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

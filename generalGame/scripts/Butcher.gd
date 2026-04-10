@@ -5,7 +5,7 @@ var player_in_chat_zone: bool = false
 
 func _ready() -> void:
 	$E.hide()
-	add_to_group("bird")
+	add_to_group("npc")
 
 func _process(_delta) -> void:
 	if player_in_chat_zone and player != null:

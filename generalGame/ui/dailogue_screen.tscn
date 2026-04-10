@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bnkor74pifeo6"]
+[gd_scene load_steps=5 format=3 uid="uid://bnkor74pifeo6"]
 
 [ext_resource type="Script" uid="uid://sbuv6wyaej6r" path="res://generalGame/scripts/dailogue_screen.gd" id="1_lppvm"]
 [ext_resource type="Texture2D" uid="uid://dieaol2kdp6rn" path="res://generalGame/assets/birds/goose/goose_faces.png" id="2_mylxv"]
 [ext_resource type="Texture2D" uid="uid://dhv37c8mo1bi7" path="res://generalGame/assets/birds/placeholder/placeholderBird.jpg" id="3_l1opd"]
+[ext_resource type="Texture2D" uid="uid://rbogq2p2v3xc" path="res://generalGame/assets/characters/Berk.png" id="4_hk2l8"]
 
 [node name="DailogueScreen" type="CanvasLayer"]
 script = ExtResource("1_lppvm")
@@ -42,13 +43,13 @@ theme_override_font_sizes/font_size = 25
 text = "Return
 "
 
-[node name="bird_images" type="Control" parent="."]
+[node name="images" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="GooseDia" type="Sprite2D" parent="bird_images"]
+[node name="GooseDia" type="Sprite2D" parent="images"]
 visible = false
 position = Vector2(952, 472)
 scale = Vector2(2.2777777, 2.25)
@@ -56,13 +57,20 @@ texture = ExtResource("2_mylxv")
 region_enabled = true
 region_rect = Rect2(128, 0, 63, 64)
 
-[node name="PlaceholderDia" type="Sprite2D" parent="bird_images"]
+[node name="PlaceholderDia" type="Sprite2D" parent="images"]
 visible = false
 position = Vector2(963, 477.5)
 scale = Vector2(2.5, 2.5689654)
 texture = ExtResource("3_l1opd")
 region_enabled = true
 region_rect = Rect2(42, 39, 68, 58)
+
+[node name="ButcherDia" type="Sprite2D" parent="images"]
+position = Vector2(960, 464)
+scale = Vector2(1.8557677, 2.0901244)
+texture = ExtResource("4_hk2l8")
+region_enabled = true
+region_rect = Rect2(124, 137, 104, 83)
 
 [node name="text" type="RichTextLabel" parent="."]
 offset_left = 104.0
