@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cupbxg026r421"]
 
 [ext_resource type="Texture2D" uid="uid://bg10gipgc07b1" path="res://generalGame/assets/birds/goose/goose_flying.png" id="1_a1ql5"]
-[ext_resource type="Script" uid="uid://heivin5k6tru" path="res://generalGame/scripts/goose.gd" id="1_bhnk6"]
+[ext_resource type="Script" uid="uid://heivin5k6tru" path="res://generalGame/scripts/Goose.gd" id="1_bhnk6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bhnk6"]
 radius = 16.0

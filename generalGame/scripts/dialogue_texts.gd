@@ -9,5 +9,10 @@ const DIALOGUES := {
 	"Placeholder": [
 		"I'm the placeholder bird.",
 		"Peep"
+	],
+	"Butcher": [
+		"Hello, I'm the butcher.",
+		"...",
+		"What do you want?"
 	]
 }

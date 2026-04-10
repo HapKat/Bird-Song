@@ -8,15 +8,16 @@ var current_bird
 
 
 func _ready():
-	$"../DailogueScreen".dialogue_finished.connect(_on_dialogue_finished)
+	$"../DailogueScreen".open_rhythm_game.connect(_on_open_rhythm_game)
 
 func openDialogue(bird):
 	var index = BirdStates.bird_progress.get(bird, {}).get("dialogue_index", 0)
 	$"../DailogueScreen".open(bird, index)
 	current_bird = bird
 	addToLogbook(bird)
+	BirdStates.bird_progress[bird.name]["dialogue_index"] += 1
 	
-func _on_dialogue_finished():
+func _on_open_rhythm_game():
 	openRhythmGame(current_bird)
 	
 func openRhythmGame(bird):
@@ -40,13 +41,13 @@ func _on_game_finished():
 
 func addToLogbook(bird):
 		## change Text
-		var BIRDTEXT: String = bird + "Text"
+		var BIRDTEXT: String = bird.name + "Text"
 		var birdText = LOGBOOK_NAMES.get_node(BIRDTEXT)
-		birdText.text = bird
-		print("Added " + bird + " to Logbook")
+		birdText.text = bird.name
+		print("Added " + bird.name + " to Logbook")
 		
 		## change image
-		var BIRDBLACKOUT: String = bird + "Blackout"
+		var BIRDBLACKOUT: String = bird.name + "Blackout"
 		var birdBlackout = LOGBOOK_IMGS.get_node(BIRDBLACKOUT)
 		birdBlackout.hide()
 		
