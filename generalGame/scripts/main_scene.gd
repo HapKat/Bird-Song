@@ -3,7 +3,7 @@ extends Node2D
 @onready var PLAYER: Node2D = $PlayerCharacter
 
 func _ready():
-	pass
+	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 
 func _process(delta):
 	# Open logbook when pressing F

@@ -45,7 +45,6 @@ func addToLogbook(bird):
 		birdText.text = bird
 		print("Added " + bird + " to Logbook")
 		
-		
 		## change image
 		var BIRDBLACKOUT: String = bird + "Blackout"
 		var birdBlackout = LOGBOOK_IMGS.get_node(BIRDBLACKOUT)
